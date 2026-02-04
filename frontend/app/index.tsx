@@ -16,6 +16,9 @@ import axios from 'axios';
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
+// HARDCODED CONTACT INFO - ALWAYS AVAILABLE
+const CONTACT_PHONE = "07887 577338";
+
 export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -43,9 +46,7 @@ export default function HomeScreen() {
   };
 
   const handleCall = () => {
-    if (contact?.phone) {
-      Linking.openURL(`tel:${contact.phone}`);
-    }
+    Linking.openURL(`tel:${CONTACT_PHONE}`);
   };
 
   if (loading) {
