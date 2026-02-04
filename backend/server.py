@@ -127,17 +127,22 @@ async def init_default_data():
         contact_data = ContactInfo(
             phone="07887 577338",
             email="info@birchwood-skegness.co.uk",
-            address="Birchwood Fishing & Camping, Skegness, Lincolnshire, UK",
-            latitude=53.1459,
-            longitude=0.3371,
+            address="Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
+            latitude=53.16737,
+            longitude=0.31966,
             facebook="https://www.facebook.com/birchwoodskegness"
         )
         await db.contact_info.insert_one(contact_data.dict())
     else:
-        # Update existing phone number
+        # Update existing contact info
         await db.contact_info.update_one(
             {"id": "contact_info"},
-            {"$set": {"phone": "07887 577338"}}
+            {"$set": {
+                "phone": "07887 577338",
+                "address": "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
+                "latitude": 53.16737,
+                "longitude": 0.31966
+            }}
         )
     
     # Add default rules
