@@ -130,7 +130,7 @@ async def init_default_data():
             address="Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
             latitude=53.16737,
             longitude=0.31966,
-            facebook="https://www.facebook.com/birchwoodskegness"
+            facebook="https://www.facebook.com/share/1AiuyXLNeF/"
         )
         await db.contact_info.insert_one(contact_data.dict())
     else:
@@ -141,7 +141,8 @@ async def init_default_data():
                 "phone": "07887 577338",
                 "address": "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
                 "latitude": 53.16737,
-                "longitude": 0.31966
+                "longitude": 0.31966,
+                "facebook": "https://www.facebook.com/share/1AiuyXLNeF/"
             }}
         )
     
