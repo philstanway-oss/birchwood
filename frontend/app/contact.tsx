@@ -16,11 +16,31 @@ import axios from 'axios';
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
+// Fallback contact data in case API fails
+const FALLBACK_CONTACT = {
+  phone: "07887 577338",
+  email: "info@birchwood-skegness.co.uk",
+  address: "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
+  latitude: 53.16737,
+  longitude: 0.31966,
+  facebook: "https://www.facebook.com/share/1AiuyXLNeF/"
+};
+
+const FALLBACK_RULES = [
+  { id: "rule_1", title: "Check-in/Check-out", description: "Check-in from 2 PM, Check-out by 11 AM", category: "general", order: 1 },
+  { id: "rule_2", title: "Quiet Hours", description: "Please keep noise to a minimum between 10 PM and 8 AM", category: "general", order: 2 },
+  { id: "rule_3", title: "Pets", description: "Pets are welcome but must be kept on a lead and under control at all times", category: "general", order: 3 },
+  { id: "rule_4", title: "Speed Limit", description: "Maximum speed limit of 5 mph on site", category: "camping", order: 4 },
+  { id: "rule_5", title: "Fires", description: "No open fires. BBQs allowed but must be off the ground", category: "camping", order: 5 },
+  { id: "rule_6", title: "Waste Disposal", description: "Please use designated bins and keep the site clean", category: "general", order: 6 }
+];
+
 export default function ContactScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
-  const [contact, setContact] = useState<any>(null);
-  const [rules, setRules] = useState<any[]>([]);
+  const [contact, setContact] = useState<any>(FALLBACK_CONTACT);
+  const [rules, setRules] = useState<any[]>(FALLBACK_RULES);
+  const [error, setError] = useState<string | null>(null);
 
   const fetchData = async () => {
     try {
