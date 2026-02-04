@@ -7,6 +7,7 @@ import {
   RefreshControl,
   ActivityIndicator,
   TouchableOpacity,
+  Linking,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,6 +15,7 @@ import axios from 'axios';
 import { useRouter } from 'expo-router';
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
+const PITCHUP_URL = 'https://www.pitchup.com/campsites/England/Central/Lincolnshire/Skegness/birchwood-fishing-and-camping/';
 
 export default function CampingScreen() {
   const [loading, setLoading] = useState(true);
