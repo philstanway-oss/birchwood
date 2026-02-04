@@ -150,14 +150,12 @@ export default function ContactScreen() {
               <Text style={styles.actionLabel}>Directions</Text>
             </TouchableOpacity>
 
-            {contact?.facebook && (
-              <TouchableOpacity style={styles.actionCard} onPress={handleFacebook}>
-                <View style={styles.actionIcon}>
-                  <Ionicons name="logo-facebook" size={32} color="#ffffff" />
-                </View>
-                <Text style={styles.actionLabel}>Facebook</Text>
-              </TouchableOpacity>
-            )}
+            <TouchableOpacity style={styles.actionCard} onPress={handleFacebook}>
+              <View style={styles.actionIcon}>
+                <Ionicons name="logo-facebook" size={32} color="#ffffff" />
+              </View>
+              <Text style={styles.actionLabel}>Facebook</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
