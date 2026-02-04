@@ -36,7 +36,7 @@ const FALLBACK_RULES = [
 export default function ContactScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
-  const [contact, setContact] = useState<any>(FALLBACK_CONTACT);
+  const [contact, setContact] = useState<any>(null);
   const [rules, setRules] = useState<any[]>(FALLBACK_RULES);
   const [error, setError] = useState<string | null>(null);
 
