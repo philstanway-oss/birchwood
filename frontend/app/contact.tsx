@@ -83,10 +83,10 @@ export default function ContactScreen() {
   };
 
   const handleDirections = () => {
-    if (contact?.latitude && contact?.longitude) {
-      const url = `https://www.google.com/maps/dir/?api=1&destination=${contact.latitude},${contact.longitude}`;
-      Linking.openURL(url);
-    }
+    const lat = contact?.latitude || 53.16737;
+    const lon = contact?.longitude || 0.31966;
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+    Linking.openURL(url);
   };
 
   const handleFacebook = () => {
