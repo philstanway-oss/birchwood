@@ -264,19 +264,33 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 4,
     borderBottomWidth: 1,
     borderBottomColor: '#e9ecef',
+  },
+  pricingLabelContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    flex: 1,
+  },
+  pricingIcon: {
+    marginRight: 12,
   },
   pricingLabel: {
     fontSize: 16,
     color: '#495057',
     fontWeight: '600',
   },
+  pricingValueContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
   pricingValue: {
     fontSize: 16,
     color: '#2d6a4f',
     fontWeight: 'bold',
+    marginRight: 4,
   },
   pricingNote: {
     flexDirection: 'row',
