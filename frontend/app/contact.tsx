@@ -16,15 +16,13 @@ import axios from 'axios';
 
 const BACKEND_URL = process.env.EXPO_PUBLIC_BACKEND_URL;
 
-// Fallback contact data in case API fails
-const FALLBACK_CONTACT = {
-  phone: "07887 577338",
-  email: "info@birchwood-skegness.co.uk",
-  address: "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK",
-  latitude: 53.16737,
-  longitude: 0.31966,
-  facebook: "https://www.facebook.com/share/1AiuyXLNeF/"
-};
+// HARDCODED CONTACT INFORMATION - ALWAYS VISIBLE
+const CONTACT_PHONE = "07887 577338";
+const CONTACT_EMAIL = "info@birchwood-skegness.co.uk";
+const CONTACT_ADDRESS = "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK";
+const CONTACT_FACEBOOK = "https://www.facebook.com/share/1AiuyXLNeF/";
+const CONTACT_LAT = 53.16737;
+const CONTACT_LON = 0.31966;
 
 const FALLBACK_RULES = [
   { id: "rule_1", title: "Check-in/Check-out", description: "Check-in from 2 PM, Check-out by 11 AM", category: "general", order: 1 },
