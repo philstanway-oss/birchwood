@@ -111,6 +111,14 @@ export default function ContactScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#2d6a4f']} />
         }
       >
+        {/* Error Banner */}
+        {error && (
+          <View style={styles.errorBanner}>
+            <Ionicons name="information-circle" size={20} color="#d8f3dc" />
+            <Text style={styles.errorText}>{error}</Text>
+          </View>
+        )}
+
         {/* Header */}
         <View style={styles.header}>
           <Ionicons name="call" size={60} color="#2d6a4f" />
