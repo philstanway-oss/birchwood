@@ -1,0 +1,183 @@
+[
+  {
+    "endpoint": "/",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.481557,
+    "error": null,
+    "data": {
+      "message": "Birchwood Camping & Fishing API"
+    },
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  {
+    "endpoint": "/camping",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/camping",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.45087,
+    "error": null,
+    "data": {
+      "id": "camping_info",
+      "title": "Camping at Birchwood",
+      "description": "Welcome to Birchwood Fishing & Camping - a quiet, family-run campsite near Skegness, Lincolnshire. We offer a peaceful retreat with excellent facilities, perfect for families and pet owners.",
+      "facilities": [
+        "Clean toilets and hot showers",
+        "Washing up areas",
+        "Electric hook-ups available",
+        "Fresh water points",
+        "Chemical disposal point",
+        "Pet-friendly environment",
+        "Safe for children",
+        "Regular cleaning service"
+      ],
+      "pitchTypes": [
+        "Tent pitches",
+        "Tourer pitches",
+        "Motorhome pitches",
+        "Up to 54 pitches available"
+      ],
+      "pricing": {
+        "tent": "Contact for rates",
+        "tourer": "Contact for rates",
+        "motorhome": "Contact for rates",
+        "note": "Prices vary by season and pitch type. Please contact us for current rates."
+      },
+      "updated_at": "2026-02-04T13:48:26.918000"
+    },
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  {
+    "endpoint": "/fishing",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/fishing",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.450003,
+    "error": null,
+    "data": {
+      "id": "fishing_info",
+      "title": "Fishing at Birchwood",
+      "description": "Enjoy course fishing at our well-stocked lake featuring a variety of species. Our peaceful fishing lake is perfect for both experienced anglers and beginners.",
+      "species": [
+        "Carp",
+        "Rudd",
+        "Roach",
+        "Tench",
+        "Bream"
+      ],
+      "dayTicketPrice": "Day tickets available - contact for pricing",
+      "rules": [
+        "Day tickets must be purchased before fishing",
+        "Fishing from designated areas only",
+        "Keep noise to a minimum",
+        "Take all litter home",
+        "Barbless hooks recommended",
+        "Follow catch and release guidelines",
+        "Children must be supervised"
+      ],
+      "updated_at": "2026-02-04T13:48:26.932000"
+    },
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  {
+    "endpoint": "/contact",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/contact",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.658774,
+    "error": null,
+    "data": {
+      "id": "contact_info",
+      "phone": "+44 1754 872555",
+      "email": "info@birchwood-skegness.co.uk",
+      "address": "Birchwood Fishing & Camping, Skegness, Lincolnshire, UK",
+      "latitude": 53.1459,
+      "longitude": 0.3371,
+      "facebook": "https://www.facebook.com/birchwoodskegness",
+      "updated_at": "2026-02-04T13:48:26.940000"
+    },
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  {
+    "endpoint": "/rules",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/rules",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.459278,
+    "error": null,
+    "data": [
+      {
+        "id": "rule_1",
+        "title": "Check-in/Check-out",
+        "description": "Check-in from 2 PM, Check-out by 11 AM",
+        "category": "general",
+        "order": 1
+      },
+      {
+        "id": "rule_2",
+        "title": "Quiet Hours",
+        "description": "Please keep noise to a minimum between 10 PM and 8 AM",
+        "category": "general",
+        "order": 2
+      },
+      {
+        "id": "rule_3",
+        "title": "Pets",
+        "description": "Pets are welcome but must be kept on a lead and under control at all times",
+        "category": "general",
+        "order": 3
+      },
+      {
+        "id": "rule_4",
+        "title": "Speed Limit",
+        "description": "Maximum speed limit of 5 mph on site",
+        "category": "camping",
+        "order": 4
+      },
+      {
+        "id": "rule_5",
+        "title": "Fires",
+        "description": "No open fires. BBQs allowed but must be off the ground",
+        "category": "camping",
+        "order": 5
+      },
+      {
+        "id": "rule_6",
+        "title": "Waste Disposal",
+        "description": "Please use designated bins and keep the site clean",
+        "category": "general",
+        "order": 6
+      }
+    ],
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  },
+  {
+    "endpoint": "/gallery",
+    "url": "https://birch-mobile.preview.emergentagent.com/api/gallery",
+    "status_code": 200,
+    "success": true,
+    "response_time": 0.446964,
+    "error": null,
+    "data": [],
+    "validation": {
+      "passed": true,
+      "issues": []
+    }
+  }
+]
