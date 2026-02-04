@@ -44,6 +44,7 @@ export default function ContactScreen() {
 
   const fetchData = async () => {
     try {
+      setError(null);
       const [contactRes, rulesRes] = await Promise.all([
         axios.get(`${BACKEND_URL}/api/contact`),
         axios.get(`${BACKEND_URL}/api/rules`),
@@ -52,6 +53,8 @@ export default function ContactScreen() {
       setRules(rulesRes.data);
     } catch (error) {
       console.error('Error fetching data:', error);
+      setError('Using offline data. Pull to refresh to try again.');
+      // Keep fallback data - already set in initial state
     } finally {
       setLoading(false);
       setRefreshing(false);
