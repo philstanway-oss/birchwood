@@ -70,20 +70,36 @@ export default function ContactScreen() {
   };
 
   const handleCall = () => {
-    Linking.openURL(`tel:${CONTACT_PHONE}`);
+    if (Platform.OS === 'web') {
+      window.open(`tel:${CONTACT_PHONE}`, '_self');
+    } else {
+      Linking.openURL(`tel:${CONTACT_PHONE}`);
+    }
   };
 
   const handleEmail = () => {
-    Linking.openURL(`mailto:${CONTACT_EMAIL}`);
+    if (Platform.OS === 'web') {
+      window.open(`mailto:${CONTACT_EMAIL}`, '_self');
+    } else {
+      Linking.openURL(`mailto:${CONTACT_EMAIL}`);
+    }
   };
 
   const handleDirections = () => {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${CONTACT_LAT},${CONTACT_LON}`;
-    Linking.openURL(url);
+    if (Platform.OS === 'web') {
+      window.open(url, '_blank');
+    } else {
+      Linking.openURL(url);
+    }
   };
 
   const handleFacebook = () => {
-    Linking.openURL(CONTACT_FACEBOOK);
+    if (Platform.OS === 'web') {
+      window.open(CONTACT_FACEBOOK, '_blank');
+    } else {
+      Linking.openURL(CONTACT_FACEBOOK);
+    }
   };
 
   if (loading) {
