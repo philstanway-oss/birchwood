@@ -47,7 +47,11 @@ export default function HomeScreen() {
   };
 
   const handleCall = () => {
-    Linking.openURL(`tel:${CONTACT_PHONE}`);
+    if (Platform.OS === 'web') {
+      window.open(`tel:${CONTACT_PHONE}`, '_self');
+    } else {
+      Linking.openURL(`tel:${CONTACT_PHONE}`);
+    }
   };
 
   if (loading) {
