@@ -125,7 +125,7 @@ async def init_default_data():
     contact_exists = await db.contact_info.find_one({"id": "contact_info"})
     if not contact_exists:
         contact_data = ContactInfo(
-            phone="+44 1754 872555",
+            phone="07887 577338",
             email="info@birchwood-skegness.co.uk",
             address="Birchwood Fishing & Camping, Skegness, Lincolnshire, UK",
             latitude=53.1459,
@@ -133,6 +133,12 @@ async def init_default_data():
             facebook="https://www.facebook.com/birchwoodskegness"
         )
         await db.contact_info.insert_one(contact_data.dict())
+    else:
+        # Update existing phone number
+        await db.contact_info.update_one(
+            {"id": "contact_info"},
+            {"$set": {"phone": "07887 577338"}}
+        )
     
     # Add default rules
     rules_exist = await db.rules.count_documents({})
