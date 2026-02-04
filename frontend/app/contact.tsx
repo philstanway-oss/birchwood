@@ -90,9 +90,8 @@ export default function ContactScreen() {
   };
 
   const handleFacebook = () => {
-    if (contact?.facebook) {
-      Linking.openURL(contact.facebook);
-    }
+    const facebookUrl = contact?.facebook || "https://www.facebook.com/share/1AiuyXLNeF/";
+    Linking.openURL(facebookUrl);
   };
 
   if (loading) {
