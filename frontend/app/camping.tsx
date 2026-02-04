@@ -62,7 +62,7 @@ export default function CampingScreen() {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Ionicons name="tent" size={60} color="#2d6a4f" />
+          <Ionicons name="bed" size={60} color="#2d6a4f" />
           <Text style={styles.headerTitle}>{campingInfo?.title || 'Camping'}</Text>
         </View>
 
