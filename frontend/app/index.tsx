@@ -173,6 +173,14 @@ const styles = StyleSheet.create({
   heroOverlay: {
     alignItems: 'center',
     padding: 24,
+    width: '100%',
+  },
+  heroLogo: {
+    width: 220,
+    height: 220,
+    borderRadius: 110,
+    borderWidth: 4,
+    borderColor: '#ffffff',
   },
   heroTitle: {
     fontSize: 42,
@@ -189,9 +197,10 @@ const styles = StyleSheet.create({
   },
   heroTagline: {
     fontSize: 16,
-    color: '#95d5b2',
-    marginTop: 8,
+    color: '#ffffff',
+    marginTop: 12,
     fontStyle: 'italic',
+    textAlign: 'center',
   },
   section: {
     padding: 20,
