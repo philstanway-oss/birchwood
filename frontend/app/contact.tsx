@@ -189,20 +189,18 @@ export default function ContactScreen() {
         </View>
 
         {/* Location - Simple Button Instead of Map */}
-        {contact?.latitude && contact?.longitude && (
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>Location</Text>
-            <View style={styles.mapPlaceholder}>
-              <Ionicons name="map" size={64} color="#2d6a4f" />
-              <Text style={styles.mapPlaceholderTitle}>Birchwood Fishing & Camping</Text>
-              <Text style={styles.mapPlaceholderText}>Skegness, Lincolnshire</Text>
-              <TouchableOpacity style={styles.directionsButton2} onPress={handleDirections}>
-                <Ionicons name="navigate" size={20} color="#ffffff" />
-                <Text style={styles.directionsButtonText}>Open in Maps</Text>
-              </TouchableOpacity>
-            </View>
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Location</Text>
+          <View style={styles.mapPlaceholder}>
+            <Ionicons name="map" size={64} color="#2d6a4f" />
+            <Text style={styles.mapPlaceholderTitle}>Birchwood Fishing & Camping</Text>
+            <Text style={styles.mapPlaceholderText}>Skegness, Lincolnshire</Text>
+            <TouchableOpacity style={styles.directionsButton2} onPress={handleDirections}>
+              <Ionicons name="navigate" size={20} color="#ffffff" />
+              <Text style={styles.directionsButtonText}>Open in Maps</Text>
+            </TouchableOpacity>
           </View>
-        )}
+        </View>
 
         {/* Site Rules */}
         <View style={styles.section}>
