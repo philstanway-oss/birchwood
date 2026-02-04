@@ -42,7 +42,7 @@ export default function Layout() {
         options={{
           title: 'Camping',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="tent" size={size} color={color} />
+            <Ionicons name="camping" size={size} color={color} />
           ),
         }}
       />
