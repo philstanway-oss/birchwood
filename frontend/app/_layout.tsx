@@ -32,7 +32,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          headerTitle: 'Birchwood Camping',
+          headerTitle: 'Birchwood Fishing & Camping',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
