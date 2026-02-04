@@ -26,6 +26,7 @@ export default function TabLayout() {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
+        headerTitleAlign: 'center',
       }}
     >
       <Tabs.Screen
@@ -43,7 +44,7 @@ export default function TabLayout() {
         options={{
           title: 'Camping',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="bonfire" size={size} color={color} />
+            <Ionicons name="bed" size={size} color={color} />
           ),
         }}
       />
