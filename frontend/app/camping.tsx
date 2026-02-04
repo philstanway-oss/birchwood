@@ -99,24 +99,53 @@ export default function CampingScreen() {
 
         {/* Pricing */}
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Pricing</Text>
+          <Text style={styles.sectionTitle}>Pricing & Booking</Text>
           <View style={styles.pricingCard}>
-            <View style={styles.pricingRow}>
-              <Text style={styles.pricingLabel}>Tent Pitches:</Text>
-              <Text style={styles.pricingValue}>{campingInfo?.pricing?.tent}</Text>
-            </View>
-            <View style={styles.pricingRow}>
-              <Text style={styles.pricingLabel}>Tourer Pitches:</Text>
-              <Text style={styles.pricingValue}>{campingInfo?.pricing?.tourer}</Text>
-            </View>
-            <View style={styles.pricingRow}>
-              <Text style={styles.pricingLabel}>Motorhome Pitches:</Text>
-              <Text style={styles.pricingValue}>{campingInfo?.pricing?.motorhome}</Text>
-            </View>
+            <TouchableOpacity 
+              style={styles.pricingRow}
+              onPress={() => Linking.openURL(PITCHUP_URL)}
+            >
+              <View style={styles.pricingLabelContainer}>
+                <Ionicons name="bed" size={20} color="#2d6a4f" style={styles.pricingIcon} />
+                <Text style={styles.pricingLabel}>Tent Pitches</Text>
+              </View>
+              <View style={styles.pricingValueContainer}>
+                <Text style={styles.pricingValue}>Book Now</Text>
+                <Ionicons name="chevron-forward" size={20} color="#2d6a4f" />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={styles.pricingRow}
+              onPress={() => Linking.openURL(PITCHUP_URL)}
+            >
+              <View style={styles.pricingLabelContainer}>
+                <Ionicons name="car" size={20} color="#2d6a4f" style={styles.pricingIcon} />
+                <Text style={styles.pricingLabel}>Tourer Pitches</Text>
+              </View>
+              <View style={styles.pricingValueContainer}>
+                <Text style={styles.pricingValue}>Book Now</Text>
+                <Ionicons name="chevron-forward" size={20} color="#2d6a4f" />
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity 
+              style={styles.pricingRow}
+              onPress={() => Linking.openURL(PITCHUP_URL)}
+            >
+              <View style={styles.pricingLabelContainer}>
+                <Ionicons name="bus" size={20} color="#2d6a4f" style={styles.pricingIcon} />
+                <Text style={styles.pricingLabel}>Motorhome Pitches</Text>
+              </View>
+              <View style={styles.pricingValueContainer}>
+                <Text style={styles.pricingValue}>Book Now</Text>
+                <Ionicons name="chevron-forward" size={20} color="#2d6a4f" />
+              </View>
+            </TouchableOpacity>
             {campingInfo?.pricing?.note && (
               <View style={styles.pricingNote}>
                 <Ionicons name="information-circle" size={20} color="#2d6a4f" />
-                <Text style={styles.pricingNoteText}>{campingInfo.pricing.note}</Text>
+                <Text style={styles.pricingNoteText}>
+                  Tap any option above to view prices and book your pitch on Pitchup.com
+                </Text>
               </View>
             )}
           </View>
