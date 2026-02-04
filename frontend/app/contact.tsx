@@ -496,4 +496,19 @@ const styles = StyleSheet.create({
     color: '#495057',
     marginBottom: 4,
   },
+  errorBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#2d6a4f',
+    padding: 12,
+    marginHorizontal: 16,
+    marginTop: 8,
+    borderRadius: 8,
+  },
+  errorText: {
+    fontSize: 14,
+    color: '#d8f3dc',
+    marginLeft: 8,
+    flex: 1,
+  },
 });
