@@ -91,7 +91,7 @@ export default function HomeScreen() {
           <Text style={styles.sectionTitle}>What We Offer</Text>
           <View style={styles.featuresGrid}>
             <View style={styles.featureCard}>
-              <Ionicons name="tent" size={40} color="#2d6a4f" />
+              <Ionicons name="bed" size={40} color="#2d6a4f" />
               <Text style={styles.featureTitle}>Camping</Text>
               <Text style={styles.featureText}>Pitches for tents, tourers & motorhomes</Text>
             </View>
