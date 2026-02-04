@@ -160,32 +160,17 @@ export default function ContactScreen() {
           </View>
         </View>
 
-        {/* Map */}
+        {/* Location - Simple Button Instead of Map */}
         {contact?.latitude && contact?.longitude && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Location</Text>
-            <View style={styles.mapContainer}>
-              <MapView
-                style={styles.map}
-                initialRegion={{
-                  latitude: contact.latitude,
-                  longitude: contact.longitude,
-                  latitudeDelta: 0.05,
-                  longitudeDelta: 0.05,
-                }}
-              >
-                <Marker
-                  coordinate={{
-                    latitude: contact.latitude,
-                    longitude: contact.longitude,
-                  }}
-                  title="Birchwood Fishing & Camping"
-                  description="Click for directions"
-                />
-              </MapView>
-              <TouchableOpacity style={styles.directionsButton} onPress={handleDirections}>
+            <View style={styles.mapPlaceholder}>
+              <Ionicons name="map" size={64} color="#2d6a4f" />
+              <Text style={styles.mapPlaceholderTitle}>Birchwood Fishing & Camping</Text>
+              <Text style={styles.mapPlaceholderText}>Skegness, Lincolnshire</Text>
+              <TouchableOpacity style={styles.directionsButton2} onPress={handleDirections}>
                 <Ionicons name="navigate" size={20} color="#ffffff" />
-                <Text style={styles.directionsButtonText}>Get Directions</Text>
+                <Text style={styles.directionsButtonText}>Open in Maps</Text>
               </TouchableOpacity>
             </View>
           </View>
