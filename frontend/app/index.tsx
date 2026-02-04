@@ -64,12 +64,14 @@ export default function HomeScreen() {
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} colors={['#2d6a4f']} />
         }
       >
-        {/* Hero Section */}
+        {/* Hero Section with Logo */}
         <View style={styles.hero}>
           <View style={styles.heroOverlay}>
-            <Ionicons name="leaf" size={60} color="#d8f3dc" />
-            <Text style={styles.heroTitle}>Birchwood</Text>
-            <Text style={styles.heroSubtitle}>Fishing & Camping</Text>
+            <Image
+              source={require('../assets/images/birchwood-logo.jpg')}
+              style={styles.heroLogo}
+              resizeMode="contain"
+            />
             <Text style={styles.heroTagline}>Your peaceful retreat near Skegness</Text>
           </View>
         </View>
