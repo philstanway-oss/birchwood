@@ -69,27 +69,20 @@ export default function ContactScreen() {
   };
 
   const handleCall = () => {
-    if (contact?.phone) {
-      Linking.openURL(`tel:${contact.phone}`);
-    }
+    Linking.openURL(`tel:${CONTACT_PHONE}`);
   };
 
   const handleEmail = () => {
-    if (contact?.email) {
-      Linking.openURL(`mailto:${contact.email}`);
-    }
+    Linking.openURL(`mailto:${CONTACT_EMAIL}`);
   };
 
   const handleDirections = () => {
-    const lat = contact?.latitude || 53.16737;
-    const lon = contact?.longitude || 0.31966;
-    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${CONTACT_LAT},${CONTACT_LON}`;
     Linking.openURL(url);
   };
 
   const handleFacebook = () => {
-    const facebookUrl = contact?.facebook || "https://www.facebook.com/share/1AiuyXLNeF/";
-    Linking.openURL(facebookUrl);
+    Linking.openURL(CONTACT_FACEBOOK);
   };
 
   if (loading) {
