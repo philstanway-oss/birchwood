@@ -164,7 +164,7 @@ export default function ContactScreen() {
               <Ionicons name="call" size={24} color="#2d6a4f" />
               <View style={styles.detailInfo}>
                 <Text style={styles.detailLabel}>Phone</Text>
-                <Text style={styles.detailValue}>{contact.phone || "07887 577338"}</Text>
+                <Text style={styles.detailValue}>{CONTACT_PHONE}</Text>
               </View>
             </View>
 
@@ -172,7 +172,7 @@ export default function ContactScreen() {
               <Ionicons name="mail" size={24} color="#2d6a4f" />
               <View style={styles.detailInfo}>
                 <Text style={styles.detailLabel}>Email</Text>
-                <Text style={styles.detailValue}>{contact.email || "info@birchwood-skegness.co.uk"}</Text>
+                <Text style={styles.detailValue}>{CONTACT_EMAIL}</Text>
               </View>
             </View>
 
@@ -180,7 +180,7 @@ export default function ContactScreen() {
               <Ionicons name="location" size={24} color="#2d6a4f" />
               <View style={styles.detailInfo}>
                 <Text style={styles.detailLabel}>Address</Text>
-                <Text style={styles.detailValue}>{contact.address || "Birchwood Fishing & Camping, Mill Lane, Skegness, Lincolnshire, PE25 1HW, UK"}</Text>
+                <Text style={styles.detailValue}>{CONTACT_ADDRESS}</Text>
               </View>
             </View>
           </View>
