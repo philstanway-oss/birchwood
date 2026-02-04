@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Layout() {
+export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
@@ -32,6 +32,7 @@ export default function Layout() {
         name="index"
         options={{
           title: 'Home',
+          headerTitle: 'Birchwood Camping',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
@@ -42,7 +43,7 @@ export default function Layout() {
         options={{
           title: 'Camping',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="camping" size={size} color={color} />
+            <Ionicons name="bonfire" size={size} color={color} />
           ),
         }}
       />
