@@ -66,7 +66,7 @@ export default function GalleryScreen() {
 
   const categories = [
     { key: 'all', label: 'All', icon: 'images' },
-    { key: 'camping', label: 'Camping', icon: 'tent' },
+    { key: 'camping', label: 'Camping', icon: 'bed' },
     { key: 'fishing', label: 'Fishing', icon: 'fish' },
     { key: 'facilities', label: 'Facilities', icon: 'business' },
   ];
