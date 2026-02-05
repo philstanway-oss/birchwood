@@ -160,6 +160,26 @@ async def init_default_data():
         ]
         for rule in default_rules:
             await db.rules.insert_one(rule.dict())
+    
+    # Add gallery images from JSON file
+    gallery_exists = await db.gallery.count_documents({})
+    if gallery_exists == 0:
+        try:
+            gallery_file = ROOT_DIR / 'gallery_seed_data.json'
+            if gallery_file.exists():
+                with open(gallery_file, 'r') as f:
+                    gallery_images = json.load(f)
+                
+                # Convert ISO date strings back to datetime
+                for img in gallery_images:
+                    if 'created_at' in img and isinstance(img['created_at'], str):
+                        img['created_at'] = datetime.fromisoformat(img['created_at'])
+                
+                if gallery_images:
+                    await db.gallery.insert_many(gallery_images)
+                    print(f"✅ Initialized {len(gallery_images)} gallery images")
+        except Exception as e:
+            print(f"⚠️ Could not load gallery images: {str(e)}")
 
 @app.on_event("startup")
 async def startup_event():
